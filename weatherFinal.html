@@ -59,6 +59,18 @@ const weatherIcon = document.querySelector(".weather-icon");
 
 async function checkWeather(city) {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+
+    const err = document.querySelector(".error");
+        const weather = document.querySelector(".weather");
+        if(response.status == 404){
+            err.innerHTML = "<h2>city \"" + city + "\" not found !</h2>";
+            err.style.height = "max-content";
+            weather.style.height = "0";
+        }
+        else{
+            weather.style.height = "max-content";
+            err.style.height = "0";
+        }
     const data = await response.json();
 
     console.log(data);
