@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box; 
+}
+    body {
+        background: linear-gradient(to right, #23074d, #cc5333);
+    }
+
+.card{
+    width: 90%;
+    max-width: 470px;
+    background-color: gray;
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px; 
+    text-align: center;
+    box-shadow: 0 0 20px black;
+}
+
+
+
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: beige;
+    background: transparent;
+}
+
+.search input{
+  width: 250px;
+  height: 45px;
+  border: none;
+  outline: none;
+  padding: 0px 7px;
+  border-radius: 24px;
+  color: #fff;
+  font-size: 15px;
+  background: linear-gradient(to right, #141E30, #243B55);
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+button{
+    --duration: 7s;
+    --easing: linear;
+    --c-color-1: rgba(255, 163, 26, .7);
+    --c-color-2: #1a23ff;
+    --c-color-3: #e21bda;
+    --c-color-4: rgba(255, 232, 26, .7);
+    --c-shadow: rgba(255, 223, 87, .5);
+    --c-shadow-inset-top: rgba(255, 223, 52, .9);
+    --c-shadow-inset-bottom: rgba(255, 250, 215, .8);
+    --c-radial-inner: #ffd215;
+    --c-radial-outer: #fff172;
+    --c-color: #fff;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    width: 140px;
+    height: 45px;
+    display: table;
+    border-radius: 24px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+    color: var(--c-color);
+    background: radial-gradient(circle, var(--c-radial-inner), var(--c-radial-outer) 80%);
+    box-shadow: 0 0 14px var(--c-shadow);
+
+}
+
+.search button img {
+    width: 16px;
+}
+
+.weather-icon{
+    width: 170px;
+    margin-top: 30px
+}
+
+.weather h1{
+    font-size: 80px;
+    font-weight: 500;
+    font-family: Rubik Doodle Shadow;
+
+}
+
+.weather h2{
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+    font-family: Playfair Display;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-family: Playfair Display;
+}
+
+.col img{
+    width: 50px;
+    margin-right: 10px;
+}
+
+.humidity, .wind{
+font-size: 28px;
+margin-top: -6px;
+}
+
+
+
