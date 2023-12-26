@@ -20,13 +20,17 @@ async function checkWeather(city) {
     if (data.weather[0].main == "Clouds") {
         weatherIcon.src = "images/clouds.png";
     } else if (data.weather[0].main == "Clear") {
-        weatherIcon.src = "images/clear.png";
+        // Check for night weather condition
+        const isNight = (data.dt > data.sys.sunset || data.dt < data.sys.sunrise);
+        weatherIcon.src = isNight ? "images/night.png" : "images/clear.png";
     } else if (data.weather[0].main == "Rain") {
         weatherIcon.src = "images/rain.png";
     } else if (data.weather[0].main == "Drizzle") {
         weatherIcon.src = "images/drizzle.png";
     } else if (data.weather[0].main == "Mist") {
         weatherIcon.src = "images/mist.png";
+    } else if (data.weather[0].main == "Night") {
+        weatherIcon.src = "images/night.png";
     }
 }
 
