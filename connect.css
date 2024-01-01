@@ -1,132 +1,189 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'poppins', sans-serif;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
-    body {
-        background: linear-gradient(to right, #23074d, #cc5333);
-    }
 
-.card{
+body {
+background: #e8e8e8; }
+
+.card {
     width: 90%;
     max-width: 470px;
-    background-color: gray;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
     color: #fff;
     margin: 100px auto 0;
+    border: 5px solid rgb(255, 255, 255);
     border-radius: 20px;
-    padding: 40px 35px; 
+    padding: 40px 35px;
     text-align: center;
-    box-shadow: 0 0 20px black;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
 }
 
-
-
-.search{
+.search {
     width: 100%;
     display: flex;
+    flex-direction: column; /* Updated to column layout on small screens */
     align-items: center;
     justify-content: space-between;
     color: beige;
     background: transparent;
 }
 
-.search input{
-  width: 250px;
-  height: 45px;
-  border: none;
-  outline: none;
-  padding: 0px 7px;
-  border-radius: 24px;
-  color: #fff;
-  font-size: 15px;
-  background: linear-gradient(to right, #141E30, #243B55);
-  box-shadow: 3px 3px 10px rgba(0,0,0,1),
-  -1px -1px 6px rgba(255, 255, 255, 0.4);
+.search input {
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: #e8e8e8;
+    box-shadow: 20px 20px 60px #c5c5c5,
+           -20px -20px 60px #ffffff;
+    transition: 0.3s;
 }
 
-button{
-    --duration: 7s;
-    --easing: linear;
-    --c-color-1: rgba(255, 163, 26, .7);
-    --c-color-2: #1a23ff;
-    --c-color-3: #e21bda;
-    --c-color-4: rgba(255, 232, 26, .7);
-    --c-shadow: rgba(255, 223, 87, .5);
-    --c-shadow-inset-top: rgba(255, 223, 52, .9);
-    --c-shadow-inset-bottom: rgba(255, 250, 215, .8);
-    --c-radial-inner: #ffd215;
-    --c-radial-outer: #fff172;
-    --c-color: #fff;
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-    position: relative;
+button {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px,rgba(45, 35, 66, 0.15) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
     cursor: pointer;
-    border: none;
-    width: 140px;
-    height: 45px;
-    display: table;
-    border-radius: 24px;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    font-weight: 600;
-    font-size: 16px;
-    letter-spacing: 0.02em;
-    line-height: 1.5;
-    color: var(--c-color);
-    background: radial-gradient(circle, var(--c-radial-inner), var(--c-radial-outer) 80%);
-    box-shadow: 0 0 14px var(--c-shadow);
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    -webkit-user-select: none;
+    user-select: auto;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
 
+}
+
+button:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+button:hover {
+    box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+ transform: translateY(-2px);
+}
+
+button:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
 }
 
 .search button img {
     width: 16px;
+    filter: drop-shadow(2px 2px 5px purple);
+
 }
 
-.weather-icon{
-    width: 170px;
-    margin-top: 30px
+.weather-icon {
+    width: 100%; /* Adjusted to full width on small screens */
+    max-width: 170px;
+    margin-top: 30px;
+    filter: drop-shadow(-3px 5px 25px black);
 }
 
-.weather h1{
-    font-size: 80px;
+.weather h1 {
+    font-size: 40px; /* Adjusted font size for smaller screens */
     font-weight: 500;
-    font-family: Rubik Doodle Shadow;
-
+    font-family: 'Rubik Doodle Shadow'; 
+    text-shadow: 4px 3px 10px black;
+    color: #18363E;
 }
 
-.weather h2{
-    font-size: 45px;
+.weather h2 {
+    font-size: 30px; /* Adjusted font size for smaller screens */
     font-weight: 400;
     margin-top: -10px;
-    font-family: Playfair Display;
+    font-family: 'Playfair Display';
+    color: #65B8BF;
 }
 
-.details{
+.details {
     display: flex;
+    flex-direction: column; /* Updated to column layout on small screens */
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    margin-top: 50px;
+    margin-top: 30px; /* Adjusted margin for smaller screens */
 }
 
-.col{
+.col {
     display: flex;
+    flex-direction: column; /* Updated to column layout on small screens */
     align-items: center;
-    text-align: left;
-    font-family: Playfair Display;
+    text-align: center; /* Centered text on small screens */
+    font-family: 'Playfair Display';
+    color: #18363E;
 }
 
-.col img{
+.col img {
     width: 50px;
-    margin-right: 10px;
+    margin-right: 0; /* Removed margin for smaller screens */
+    filter: drop-shadow(3px 5px 16px black);
 }
 
-.humidity, .wind{
-font-size: 28px;
-margin-top: -6px;
+.humidity,
+.wind {
+    font-size: 20px; /* Adjusted font size for smaller screens */
+    margin-top: -6px;
+    filter: drop-shadow(-3px 5px 25px black);
 }
 
+@media screen and (min-width: 768px) {
+    /* Apply styles for screens wider than 768px (tablet and desktop) */
+    .search {
+        flex-direction: row;
+    }
 
+    .search input {
+        width: 250px;
+        max-width: none;
+    }
 
+    .weather h1 {
+        font-size: 80px;
+    }
+
+    .weather h2 {
+        font-size: 45px;
+    }
+
+    .details {
+        flex-direction: row;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .col {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+    }
+
+    .col img {
+        margin-right: 10px;
+    }
+
+    .humidity,
+    .wind {
+        font-size: 28px;
+    }
+}
